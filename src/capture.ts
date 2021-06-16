@@ -53,6 +53,7 @@ export default async function captureScene({
 }) {
     const browser = await puppeteer.launch({
         headless: true,
+        args: [ '--no-sandbox']
     });
     const page = await openPage({
         browser,
